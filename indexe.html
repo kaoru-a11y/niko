@@ -57,20 +57,20 @@ div, h1, h2, h3, p, span, table, tr, td, ul, ol, li, a{
 
 <script>
 
-var x,y
-var step=20
-var flag=0
+let x,y
+let step=20
+let flag=0
 
 // Your snappy message. Important: the space at the end of the sentence!!!
-var message="consideration&relaxation*** "
+let message="consideration&relaxation*** "
 message=message.split("")
 
-var xpos=new Array()
+let xpos=new Array()
 for (i=0;i<=message.length-1;i++) {
  xpos[i]=-50
 }
 
-var ypos=new Array()
+let ypos=new Array()
 for (i=0;i<=message.length-1;i++) {
  ypos[i]=-50
 }
@@ -91,7 +91,7 @@ function makesnake() {
   ypos[0]=y
 
   for (i=0; i<message.length-1; i++) {
-      var thisspan = eval("span"+(i)+".style")
+      let thisspan = eval("span"+(i)+".style")
       thisspan.posLeft=xpos[i]
    thisspan.posTop=ypos[i]
      }
@@ -106,12 +106,12 @@ function makesnake() {
   ypos[0]=y
 
   for (i=0; i<message.length-1; i++) {
-      var thisspan = eval("document.span"+i)
+      let thisspan = eval("document.span"+i)
       thisspan.left=xpos[i]
    thisspan.top=ypos[i]
      }
  }
-  var timer=setTimeout("makesnake()",30)
+  let timer=setTimeout("makesnake()",30)
 }
 
 </script>
@@ -143,13 +143,13 @@ function newImage(arg) {
 
 function changeImages() {
  if (document.images && (preloadFlag == true)) {
-  for (var i=0; i<changeImages.arguments.length; i+=2) {
+  for (let i=0; i<changeImages.arguments.length; i+=2) {
    document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
   }
  }
 }
 
-var preloadFlag = false;
+let preloadFlag = false;
 function preloadImages() {
  if (document.images) {
   enter_01002 = newImage("pics/enter_01-02.gif");
