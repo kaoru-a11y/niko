@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<title>ボタンのサンプル</title>
+<meta http-equiv="Content-Type" content="text/html; charset=x-sjis">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v2.0
+  if (document.MM_swapImgData != null)
+    for (let i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+
+function MM_preloadImages() { //v2.0
+  if (document.images) {
+    let imgFiles = MM_preloadImages.arguments;
+    if (document.preloadArray==null) document.preloadArray = new Array();
+    let i = document.preloadArray.length;
+    with (document) for (let j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+      preloadArray[i] = new Image;
+      preloadArray[i++].src = imgFiles[j];
+  } }
+}
+
+function MM_swapImage() { //v2.0
+  let i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+    obj = eval(objStr);
+    if (obj != null) {
+      swapArray[j++] = obj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+      obj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" text="#336666" link="#CC0000" vlink="#FF6633" alink="#CC00CC" onLoad="MM_preloadImages('bu_drobwn.gif','#972634462450');MM_preloadImages('bu_drobwb.gif','#972635014230');MM_preloadImages('bu_dropkb.gif','#972638886870');MM_preloadImages('bu_dropkn.gif','#972638941680')">
+<center>
+  <p><br>
+    <b><font size="4">ボタンのサンプル1<br>
+                      Buttons1</font></b><br>
+    <br>
+    <a href="../index.html#mihon" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.bu_drobwb','document.bu_drobwb','bu_drobwb.gif','#972635014230')"><img name="bu_drobwb" border="0" src="bu_drobwb1.gif" width="158" height="96"></a>
+<a href="bu_sample2.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.bu_drobwn','document.bu_drobwn','bu_drobwn.gif','#972634462450')"><img name="bu_drobwn" border="0" src="bu_drobwn1.gif" width="158" height="96"></a> 
+  </p>
+  <p><br>
+    <br>
+<pre>
+左向きの水滴をクリックしていただくとホームページに戻ります。<br>
+      右向きの水滴をクリックしていただくと次のボタンのページにとびます。<br>
+If you click the drop on the left, You will go back to my homepage.<br>
+      If you click the drop on the right, You will go to the next sample button.
+</pre><br>
+    <br>
+   <!-- ピンクの水滴 </p>
+  <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.bu_dropkb','document.bu_dropkb','bu_dropkb.gif','#972638886870')"><img name="bu_dropkb" border="0" src="bu_dropkb1.gif" width="191" height="98"></a> 
+    <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.bu_dropkn','document.bu_dropkn','bu_dropkn.gif','#972638941680')"><img name="bu_dropkn" border="0" src="bu_dropkn1.gif" width="191" height="98"></a> 
+-->
+  </p>
+<br>
+<br>
+
+</center>
+</body>
+</html>
